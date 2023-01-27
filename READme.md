@@ -68,7 +68,7 @@ The GradeTracker API allows users to sign up, login, and submit grievances to an
 
 -   Success Response:
 
-    <img src="./images/getAllUsers.png">
+    <img src="./images/resGetAllUsers.png">
 
 -   Error Response:
 
