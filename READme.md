@@ -19,4 +19,5 @@ Data:
     <img src="./images/resSignup.png">
 
 -   Error Response:
-    <img src="./images/errSignup.png.png">
+
+    <img src="./images/errSignup.png">
