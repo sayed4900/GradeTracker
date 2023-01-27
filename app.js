@@ -7,6 +7,7 @@ const mongoSanitize = require("express-mongo-sanitize");
 const xss = require("xss-clean");
 const hpp = require("hpp");
 const bodyParser = require("body-parser");
+// const jwt = require("express-jwt");
 
 const AppError = require("./utils/appError");
 const globalErrorHandler = require("./controllers/errorController");
@@ -41,9 +42,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // app.use(express.urlencoded({ extended: true }));
 // app.use(express.json());
 
+//This code uses the express-jwt middleware to check the JWT in the Authorization header
+// app.use(jwt({ secret: process.env.JWT_SECRET }).unless({ path: ["/login"] }));
 // *********************************************
 // 1)GLOBAL MIDDLEWARES
-// Serving static files
 
 // Set security HTTP header
 app.use(helmet());
