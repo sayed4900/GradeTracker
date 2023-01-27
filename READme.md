@@ -16,6 +16,7 @@ Data:
 <img src="./images/reqSignup.png">
 
 -   Success Response:
+
     <img src="./images/resSignup.png">
 
 -   Error Response:
