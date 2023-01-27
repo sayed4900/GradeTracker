@@ -74,7 +74,7 @@ The GradeTracker API allows users to sign up, login, and submit grievances to an
 
     <img src="./images/fail.png">
 
-### 4) Get All Users Who Do Grievance
+### 5) Get All Users Who Do Grievance
 
 -   <a href="#https://friendly-snaps-elk.cyclic.app/grievance-users">https://friendly-snaps-elk.cyclic.app/grievance-users</a>
 
