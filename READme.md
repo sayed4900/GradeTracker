@@ -8,9 +8,10 @@ The GradeTracker API allows users to sign up, login, and submit grievances to an
 
 ### 1) signup
 
-https://friendly-snaps-elk.cyclic.app/signup
-Method: POST
-Data:
+-   <a href="#https://friendly-snaps-elk.cyclic.app/signup">https://friendly-snaps-elk.cyclic.app/signup</a>
+
+-   Method: POST
+    Data:
 
 <img src="./images/reqSignup.png">
 
