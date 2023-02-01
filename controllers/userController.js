@@ -4,10 +4,7 @@ const catchAsync = require("../utils/catchAsync");
 
 exports.getAllUser = catchAsync(async (req, res, next) => {
     const users = await User.find().sort({ createdAt: "desc" }).lean();
-    res.status(201).json({
-        status: "success",
-        data: users,
-    });
+     res.status(201).json(users);
 });
 
 exports.doGrievance = catchAsync(async (req, res) => {
@@ -23,5 +20,5 @@ exports.doGrievance = catchAsync(async (req, res) => {
 
 exports.getAllGrievanceUsers = catchAsync(async (req, res, next) => {
     const users = await Grievance.find({}).sort({ createdAt: "desc" }).lean();
-    res.status(201).json({ status: "success", data: { users } });
+   res.status(201).json(users);
 });
