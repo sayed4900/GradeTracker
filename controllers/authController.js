@@ -22,7 +22,7 @@ const signToken = (id) => {
 //     res.status(statusCode).json({
 //         status: "success",
 //         token,
-//         data: { user },
+//          user
 //     });
 // };
 
