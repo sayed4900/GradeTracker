@@ -13,15 +13,18 @@ const AppError = require("./utils/appError");
 const globalErrorHandler = require("./controllers/errorController");
 const userRouter = require("./routes/userRoutes");
 
-// const userRouter = require('./routes/userRoutes');
-// const reviewRouter = require('./routes/reviewRoutes');
-// const viewRouter = require('./routes/viewRoutes');
 
-// const cookieParser = require('cookie-parser');
 
 const app = express();
 
-// app.use(cookieParser()); // parse data from cookies
+app.use(function (req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header(
+        "Access-Control-Allow-Headers",
+        "Origin, X-Requested-With, Content-Type, Accept"
+    );
+    next();
+});
 
 app.use(
     helmet.contentSecurityPolicy({
