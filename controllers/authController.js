@@ -59,7 +59,7 @@ exports.login = catchAsync(async (req, res, next) => {
     const user = await User.findOne({ email });
     // const correct = await user.correctPassword(password, user.password);
     if (!user || !(await user.correctPassword(password, user.password))) {
-        return next(new AppError("Incorrect email or password"), 401); //401 unauthorized
+        return next(new AppError("Incorrect email or password",401)); //401 unauthorized
     }
 
     // 3)if everything ok, send token to client
@@ -68,7 +68,8 @@ exports.login = catchAsync(async (req, res, next) => {
     const token = signToken(user._id);
 
     res.cookie("JWT", token);
-    res.header("auth-token", token).send("Logged in");
+    res.status(200).json({user, token: token });
+//     res.header("auth-token", token).send("Logged in");
 });
 
 // exports.logout = (req, res) => {
