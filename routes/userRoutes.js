@@ -14,6 +14,9 @@ router.post(
     userController.doGrievance
 );
 router.get(
+    "/",userController.getAllUser
+);
+router.get(
     "/getAllUsers",
     authController.protect,
     authController.restrictTo("admin"),
