@@ -41,9 +41,8 @@ exports.signup = catchAsync(async (req, res) => {
 
     res.cookie("JWT", token);
     res.status(201).json({
-        status: "success",
+        user,
         token,
-        data: { user },
     });
     // createSendToken(user, 201, res);
 });
@@ -68,7 +67,10 @@ exports.login = catchAsync(async (req, res, next) => {
     const token = signToken(user._id);
 
     res.cookie("JWT", token);
-    res.status(200).json({user, token: token });
+    res.status(201).json({
+        user,
+        token,
+    });
 //     res.header("auth-token", token).send("Logged in");
 });
 
