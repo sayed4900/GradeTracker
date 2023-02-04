@@ -9,8 +9,8 @@ router.post("/login", authController.login);
 
 router.post(
     "/doGrievance",
-//     authController.protect,
-//     authController.restrictTo("user"),
+    authController.protect,
+    authController.restrictTo("user"),
     userController.doGrievance
 );
 router.get(
